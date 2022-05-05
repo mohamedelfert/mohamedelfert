@@ -26,7 +26,6 @@ Skills: PHP / LARAVEL / OOP - MVC / MSQL / JS / HTML - HTML5 / CSS - CSS3 / AJAX
 
 ![GitHub streak stats](https://github-readme-streak-stats.herokuapp.com/?user=mohamedelfert)  
 
-![Profile views](https://gpvc.arturio.dev/mohamedelfert)  
 
 # 💫About Me :
 Hi there 👋, my name is Mohamed Ibrahiem
@@ -53,3 +52,4 @@ I am Backend Developer ( PHP | Laravel )
 
 ---
 [![](https://visitcount.itsvg.in/api?id=mohamedelfert&icon=0&color=0)](https://visitcount.itsvg.in)
+![Profile views](https://gpvc.arturio.dev/mohamedelfert)  
