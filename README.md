@@ -1,7 +1,7 @@
 # 💫About Me :
 ### Hi there 👋, my name is Mohamed Ibrahiem
 #### I am Backend Developer ( PHP | Laravel )
-![I am Backend Developer ( PHP | Laravel )](https://camo.githubusercontent.com/83b2ecc4b28aaf60af02fa756bd2e31234e5b4fc02c586ba38c9fbbe83adf3c7/68747470733a2f2f64726976652e676f6f676c652e636f6d2f75633f6578706f72743d766965772669643d3146784e3562664b667545443638794531444d6c72686b36395f307478722d5261)
+(https://camo.githubusercontent.com/83b2ecc4b28aaf60af02fa756bd2e31234e5b4fc02c586ba38c9fbbe83adf3c7/68747470733a2f2f64726976652e676f6f676c652e636f6d2f75633f6578706f72743d766965772669643d3146784e3562664b667545443638794531444d6c72686b36395f307478722d5261)
 
 Skills: PHP / LARAVEL / OOP - MVC / MSQL / JS / HTML - HTML5 / CSS - CSS3 / AJAX
 
@@ -19,7 +19,6 @@ Skills: PHP / LARAVEL / OOP - MVC / MSQL / JS / HTML - HTML5 / CSS - CSS3 / AJAX
 
 ## 🏆GitHub Trophies
 [![trophy](https://github-profile-trophy.vercel.app/?username=mohamedelfert)](https://github.com/ryo-ma/github-profile-trophy)
-![](https://github-profile-trophy.vercel.app/?username=mohamedelfert&theme=radical&no-frame=false&no-bg=false&margin-w=4)
 
 ### ✍️Random Dev Quote
 ![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
