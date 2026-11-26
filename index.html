@@ -3,110 +3,269 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f3f1eb">
+  <meta name="theme-color" content="#f4f2ec">
+  <title>Mohamed Elfert — Senior Backend Developer, PHP / Laravel</title>
   <meta name="description" content="Mohamed Ibrahiem Elfert — Senior Backend Developer with 4+ years of PHP and Laravel experience, building CRM, subscription, billing and real-estate systems.">
-  <title>Mohamed Elfert — Senior Backend Developer</title>
+  <link rel="canonical" href="https://mohamedelfert.github.io/mohamedelfert/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Mohamed Elfert — Senior Backend Developer, PHP / Laravel">
+  <meta property="og:description" content="Senior Backend Developer building CRM, subscription, billing and integration systems with PHP and Laravel.">
+  <meta property="og:url" content="https://mohamedelfert.github.io/mohamedelfert/">
+  <meta property="og:image" content="https://mohamedelfert.github.io/mohamedelfert/assets/og.png">
+  <meta property="og:image:alt" content="Mohamed Elfert — Senior Backend Developer, PHP / Laravel">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preload" href="assets/fonts/fraunces-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
-  <div class="noise" aria-hidden="true"></div>
+  <a class="skip-link" href="#main">Skip to content</a>
   <div class="scroll-progress" aria-hidden="true"><span></span></div>
 
   <header class="header" id="top">
-    <a class="wordmark" href="#top" aria-label="Mohamed Elfert home"><span class="wordmark-symbol">M<span>.</span></span><span class="wordmark-name">MOHAMED<br>ELFERT</span></a>
-    <nav class="nav" aria-label="Main navigation">
-      <a href="#about">About</a><a href="#expertise">Expertise</a><a href="#experience">Experience</a><a href="#work">Selected work</a><a href="#education">Education</a>
+    <a class="wordmark" href="#top" aria-label="Mohamed Elfert, back to top"><span class="wordmark-mark">M<i></i></span><span class="wordmark-name">Mohamed Elfert</span></a>
+    <nav class="nav" id="nav" aria-label="Main navigation">
+      <a href="#about">About</a>
+      <a href="#expertise">Expertise</a>
+      <a href="#experience">Experience</a>
+      <a href="#work">Work</a>
+      <a href="#contact">Contact</a>
+      <a class="nav-cv" href="assets/cv/Mohamed-Elfert-CV.pdf" download>Download CV</a>
     </nav>
-    <a class="header-contact magnetic" href="assets/cv/Mohamed-Elfert-CV.pdf" download>Download CV <span>↓</span></a>
-    <button class="menu-button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
+    <a class="button button-ink header-cv magnetic" href="assets/cv/Mohamed-Elfert-CV.pdf" download>Download CV <span aria-hidden="true">↓</span></a>
+    <button class="menu-button" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="nav"><span></span><span></span></button>
   </header>
 
-  <main>
-    <section class="hero section-wrap" id="home">
-      <div class="hero-topline reveal"><span><i class="availability-dot"></i> OPEN TO THE RIGHT OPPORTUNITY</span><span>BASED IN EGYPT <b>·</b> WORKING WORLDWIDE</span></div>
-      <div class="hero-grid">
-        <div class="hero-copy">
-          <p class="overline reveal">SENIOR BACKEND DEVELOPER <span> / </span> PHP &amp; LARAVEL</p>
-          <h1 class="hero-title"><span class="title-line reveal">Building</span><span class="title-line title-indent reveal">systems<span class="period">.</span></span><span class="title-line title-outline reveal">Not just</span><span class="title-line title-outline title-indent reveal">features<span class="period">.</span></span></h1>
-          <p class="hero-summary reveal">I’m Mohamed, a Senior Backend Developer with 4+ years of hands-on PHP and Laravel experience. I build CRM platforms, subscription and billing workflows, REST APIs, and business systems designed to support real operations.</p>
-          <div class="hero-actions reveal"><a class="button button-dark magnetic" href="#work">Explore selected work <span>↘</span></a><a class="button button-outline" href="assets/cv/Mohamed-Elfert-CV.pdf" download>Download CV <span>↓</span></a></div>
-        </div>
-        <div class="hero-art reveal" aria-label="Abstract backend engineering visual">
-          <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div><div class="art-orbit orbit-three"></div>
-          <div class="art-core"><span class="core-bracket">{ }</span><span class="core-label">BACKEND<br>ENGINEERING</span></div>
-          <div class="orbit-node node-php"><span>PHP</span></div><div class="orbit-node node-laravel"><span>Laravel</span></div><div class="orbit-node node-db"><span>SQL</span></div>
-          <div class="art-caption caption-top">01 — THINK IN SYSTEMS</div><div class="art-caption caption-bottom">ARCHITECTURE <span>·</span> LOGIC <span>·</span> DELIVERY</div>
-          <div class="art-cross cross-a">+</div><div class="art-cross cross-b">+</div>
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero container" id="home" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="status reveal"><i class="status-dot" aria-hidden="true"></i>Open to the right opportunity · Based in Egypt</p>
+        <h1 id="hero-title" class="hero-title reveal">Senior Backend Developer <span class="hero-role">— PHP&nbsp;/&nbsp;Laravel</span></h1>
+        <p class="hero-tagline reveal">Building systems. <em>Not just features.</em></p>
+        <p class="hero-summary reveal">4+ years of hands-on PHP and Laravel. I build CRM platforms, subscription and billing workflows, REST APIs and integrations that support real business operations.</p>
+        <div class="hero-actions reveal">
+          <a class="button button-ink magnetic" href="#work">Explore selected work <span aria-hidden="true">↘</span></a>
+          <a class="button button-line" href="assets/cv/Mohamed-Elfert-CV.pdf" download>Download CV <span aria-hidden="true">↓</span></a>
+          <a class="text-link" href="#contact">Get in touch</a>
         </div>
       </div>
-      <div class="hero-bottom reveal"><span class="hero-index">01 <i>/</i> 05</span><span class="hero-scroll">SCROLL TO EXPLORE <span class="scroll-arrow">↓</span></span><span class="hero-location">PHP · LARAVEL · MYSQL · REDIS</span></div>
+
+      <figure class="arch reveal" id="arch" aria-labelledby="arch-caption">
+        <div class="arch-head"><span>Request path</span><span>Illustrative</span></div>
+        <ol class="arch-steps">
+          <li class="arch-step is-active"><span class="arch-index">01</span><div><h2>Client request</h2><ul><li>REST API</li><li>Business app</li><li>CRM tenants</li></ul></div></li>
+          <li class="arch-step"><span class="arch-index">02</span><div><h2>Authentication &amp; access</h2><ul><li>Sanctum</li><li>Passport</li><li>RBAC</li><li>Policies</li><li>Middleware</li></ul></div></li>
+          <li class="arch-step"><span class="arch-index">03</span><div><h2>Laravel modules</h2><ul><li>Customers</li><li>Subscriptions</li><li>Billing</li><li>Reporting</li><li>Custom fields</li></ul></div></li>
+          <li class="arch-step"><span class="arch-index">04</span><div><h2>Background processing</h2><ul><li>Queues</li><li>Jobs</li><li>Events</li><li>Listeners</li><li>Redis</li><li>Webhooks</li></ul></div></li>
+          <li class="arch-step"><span class="arch-index">05</span><div><h2>Data &amp; services</h2><ul><li>MySQL</li><li>Stripe</li><li>PayPal</li><li>PayTabs</li><li>Google Calendar</li><li>Zoom</li></ul></div></li>
+        </ol>
+        <figcaption id="arch-caption">How a request typically moves through the systems I build. Technologies are from my work; the diagram is not a specific company’s architecture.</figcaption>
+      </figure>
     </section>
 
-    <div class="marquee" aria-label="Core technologies"><div class="marquee-track"><span>PHP</span><i>✳</i><span>LARAVEL</span><i>✳</i><span>MYSQL</span><i>✳</i><span>REDIS</span><i>✳</i><span>REST APIS</span><i>✳</i><span>BACKEND SYSTEMS</span><i>✳</i><span>PHP</span><i>✳</i><span>LARAVEL</span><i>✳</i><span>MYSQL</span><i>✳</i><span>REDIS</span><i>✳</i><span>REST APIS</span><i>✳</i><span>BACKEND SYSTEMS</span><i>✳</i></div></div>
+    <div class="facts container reveal" aria-label="Key facts">
+      <div><b>4+ years</b><span>PHP &amp; Laravel</span></div>
+      <div><b>Laravel 6 – 12</b><span>PHP 7.x / 8.x</span></div>
+      <div><b>Senior since Jan 2026</b><span>Promoted from Junior</span></div>
+      <div><b>CRM · Billing · APIs</b><span>Business systems</span></div>
+    </div>
 
-    <section class="about section-wrap section-space" id="about">
-      <div class="section-kicker reveal"><span>01 / THE PERSON</span><span class="kicker-line"></span><span>ABOUT</span></div>
-      <div class="about-layout">
-        <h2 class="display-heading reveal">Good software<br>starts with <em>good</em><br><span class="serif-word">thinking.</span></h2>
-        <div class="about-copy reveal"><p class="lead-copy">I turn business requirements into dependable backend systems — from data models and APIs to integrations, automation, and production workflows.</p><p>I have over 4 years of hands-on PHP and Laravel experience and currently work at 8X CRM. I joined as a Junior Backend Developer in January 2024 and was promoted to Senior Backend Developer in January 2026.</p><p>My experience spans CRM, subscription management, billing and invoicing, payments, reporting, customer management, business-process automation, and real-estate platforms. I work with modular Laravel applications, MySQL, asynchronous processing, and third-party integrations.</p><a class="underlined-link" href="https://www.linkedin.com/in/mohamed-elfert/" target="_blank" rel="noreferrer">Connect on LinkedIn <span>↗</span></a></div>
+    <!-- ABOUT -->
+    <section class="section container" id="about" aria-labelledby="about-title">
+      <p class="eyebrow reveal">01 — About</p>
+      <div class="split">
+        <h2 id="about-title" class="display reveal">Business requirements, built into <em>dependable</em> systems.</h2>
+        <div class="prose reveal">
+          <p class="lead">I turn business requirements into backend systems that hold up in production: data models, APIs, integrations, automation and the workflows around them.</p>
+          <p>I have over 4 years of hands-on PHP and Laravel experience and work at 8X CRM. I joined as a Junior Backend Developer in January 2024 and was promoted to Senior Backend Developer in January 2026.</p>
+          <p>My work spans CRM, subscription management, billing and invoicing, payments, reporting, customer management, business-process automation and real-estate platforms, using modular Laravel applications, MySQL, asynchronous processing and third-party integrations.</p>
+        </div>
       </div>
-      <div class="principles reveal"><div><span>01</span><strong>Clarity over complexity</strong></div><div><span>02</span><strong>Maintainability by design</strong></div><div><span>03</span><strong>Business-first engineering</strong></div></div>
+      <ul class="principles reveal">
+        <li><span>01</span><b>Clarity over complexity</b><p>Readable code and explicit business rules that the next developer can follow.</p></li>
+        <li><span>02</span><b>Maintainability by design</b><p>Modular structure and reusable components instead of one-off fixes.</p></li>
+        <li><span>03</span><b>Business-first engineering</b><p>Understanding the workflow and the people who rely on it before writing code.</p></li>
+      </ul>
     </section>
 
-    <section class="expertise section-wrap section-space" id="expertise">
-      <div class="section-kicker reveal"><span>02 / THE TOOLKIT</span><span class="kicker-line"></span><span>EXPERTISE</span></div>
-      <div class="expertise-head"><h2 class="display-heading reveal">The craft<br>behind the <span class="serif-word">code.</span></h2><p class="section-aside reveal">A focused toolkit for designing, building, and supporting backend applications.</p></div>
-      <div class="expertise-list">
-        <article class="expertise-row reveal"><span class="row-index">01</span><div class="row-title"><h3>Backend &amp; API engineering</h3><p>Application logic, API design and service-layer implementation</p></div><div class="row-tags"><span>PHP 7.x / 8.x</span><span>Laravel 6–12</span><span>REST APIs</span><span>Eloquent</span><span>Sanctum</span><span>Passport</span></div><span class="row-arrow">↗</span></article>
-        <article class="expertise-row reveal"><span class="row-index">02</span><div class="row-title"><h3>Data &amp; architecture</h3><p>Relational data models and modular application structure</p></div><div class="row-tags"><span>MySQL</span><span>Schema design</span><span>Indexing</span><span>Query optimization</span><span>Laravel Modules</span><span>MVC / OOP</span></div><span class="row-arrow">↗</span></article>
-        <article class="expertise-row reveal"><span class="row-index">03</span><div class="row-title"><h3>Async processing &amp; automation</h3><p>Background work, scheduled processes and event-driven workflows</p></div><div class="row-tags"><span>Queues</span><span>Jobs</span><span>Events</span><span>Listeners</span><span>Observers</span><span>Cron</span><span>Webhooks</span></div><span class="row-arrow">↗</span></article>
-        <article class="expertise-row reveal"><span class="row-index">04</span><div class="row-title"><h3>Integrations &amp; access control</h3><p>External services, payments and secure role-based workflows</p></div><div class="row-tags"><span>Stripe</span><span>PayPal</span><span>PayTabs</span><span>Google Calendar</span><span>Zoom</span><span>RBAC</span><span>Spatie</span><span>Laratrust</span></div><span class="row-arrow">↗</span></article>
+    <!-- EXPERTISE -->
+    <section class="section container" id="expertise" aria-labelledby="exp-title">
+      <p class="eyebrow reveal">02 — Technical expertise</p>
+      <h2 id="exp-title" class="display reveal">The toolkit behind <em>the systems.</em></h2>
+      <div class="skills">
+        <article class="skill reveal"><h3>Backend development</h3><p>PHP · Laravel · REST APIs · Eloquent ORM · OOP · MVC</p></article>
+        <article class="skill reveal"><h3>Database engineering</h3><p>MySQL · Database design · Relationships · Migrations · Indexing · Query optimization</p></article>
+        <article class="skill reveal"><h3>Architecture &amp; application design</h3><p>Modular Laravel architecture · Service layer · Reusable components · Business logic</p></article>
+        <article class="skill reveal"><h3>Background processing</h3><p>Queues · Jobs · Events · Listeners · Observers · Cron jobs · Webhooks · Redis</p></article>
+        <article class="skill reveal"><h3>Security &amp; access control</h3><p>Authentication · Authorization · Sanctum · Passport · RBAC · Policies · Gates · Middleware</p></article>
+        <article class="skill reveal"><h3>Integrations</h3><p>Stripe · PayPal · PayTabs · Google Calendar · Zoom · XML feeds · Third-party APIs</p></article>
+        <article class="skill skill-wide reveal"><h3>Tools &amp; workflow</h3><p>Git · GitHub · Bitbucket · Composer · Artisan · Postman · Docker · Testing</p></article>
       </div>
     </section>
 
-    <section class="experience section-wrap section-space" id="experience">
-      <div class="section-kicker reveal"><span>03 / THE JOURNEY</span><span class="kicker-line"></span><span>EXPERIENCE</span></div>
-      <div class="experience-layout"><h2 class="display-heading reveal">Progress<br>through <span class="serif-word">practice.</span></h2><div class="timeline">
-        <article class="timeline-item reveal"><div class="timeline-marker"><i></i></div><div class="timeline-meta"><span>8X CRM</span><span>JAN 2026 — PRESENT</span></div><div class="timeline-content"><h3>Senior Backend Developer</h3><p class="timeline-subtitle">PHP · Laravel · CRM &amp; Business Systems</p><p>Developing backend features, modules, REST APIs and business logic for the core multi-tenant CRM and related business systems. Investigating production issues and delivering customer-requested functionality.</p><span class="timeline-current">CURRENT ROLE <i></i></span></div></article>
-        <article class="timeline-item reveal"><div class="timeline-marker"><i></i></div><div class="timeline-meta"><span>8X CRM</span><span>JAN 2024 — JAN 2026</span></div><div class="timeline-content"><h3>Junior Backend Developer</h3><p class="timeline-subtitle">PHP · Laravel</p><p>Built backend modules and workflows, including Custom Fields, subscription lifecycle management, invoices, payments, customer health, segmentation, reporting, and role-based access. Contributed to 8X Business, an internal platform digitizing cross-team operational processes.</p></div></article>
-        <article class="timeline-item reveal"><div class="timeline-marker"><i></i></div><div class="timeline-meta"><span>800 SAT</span><span>MAY 2023 — SEP 2023</span></div><div class="timeline-content"><h3>Backend Developer</h3><p class="timeline-subtitle">REMOTE · JORDAN</p><p>Developed and deployed TasSystem, a student–teacher booking and scheduling platform. Implemented calendar availability, booking approvals, penalties, and PayTabs payments within an Agile/Scrum team.</p></div></article>
-        <article class="timeline-item reveal"><div class="timeline-marker"><i></i></div><div class="timeline-meta"><span>IPDA3 TECH</span><span>FEB 2022 — MAY 2022</span></div><div class="timeline-content"><h3>Backend Developer — Training</h3><p class="timeline-subtitle">MANSOURA, EGYPT</p><p>Completed practical PHP and Laravel training. Built Blood Bank System with Laravel 7, REST APIs, admin dashboard and public website, and Sofra restaurant operations dashboard.</p></div></article>
-      </div></div>
-    </section>
+    <!-- EXPERIENCE -->
+    <section class="section container" id="experience" aria-labelledby="xp-title">
+      <p class="eyebrow reveal">03 — Experience</p>
+      <h2 id="xp-title" class="display reveal">From junior to senior, <em>on one product line.</em></h2>
 
-    <section class="work section-wrap section-space" id="work">
-      <div class="section-kicker reveal"><span>04 / SELECTED WORK</span><span class="kicker-line"></span><span>PROJECTS</span></div>
-      <div class="work-heading"><h2 class="display-heading reveal">Work with<br><span class="serif-word">purpose.</span></h2><p class="section-aside reveal">A glimpse into professional environments I contribute to. Company work is presented at a high level to respect confidentiality.</p></div>
-      <div class="project-grid project-grid-three">
-        <article class="project-card project-large reveal"><a class="project-visual visual-crm" href="https://8x.8xcrm.net/" target="_blank" rel="noreferrer" aria-label="Visit 8X CRM"><div class="visual-topline"><span>CORE CRM PLATFORM</span><span>01 / 03</span></div><div class="crm-composition"><div class="crm-sidebar"><b>8X</b><i></i><i></i><i></i><i></i></div><div class="crm-main"><div class="crm-bar"></div><div class="crm-cards"><i></i><i></i><i></i></div><div class="crm-chart"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><div class="crm-lines"><i></i><i></i><i></i></div></div></div><span class="visual-open">↗</span></a><div class="project-info"><div class="project-meta"><span>PROFESSIONAL EXPERIENCE</span><span>COMPANY PLATFORM</span></div><h3>8X CRM</h3><p>Backend development for a multi-tenant CRM platform, including custom fields, APIs, business logic, production support and customer-requested modules.</p><div class="project-stack"><span>PHP</span><span>LARAVEL</span><span>MYSQL</span><span>RBAC</span></div><a class="underlined-link" href="https://8x.8xcrm.net/" target="_blank" rel="noreferrer">Visit website ↗</a></div></div></article>
-        <article class="project-card reveal"><a class="project-visual visual-business" href="https://business.8worx.com/" target="_blank" rel="noreferrer" aria-label="Visit 8X Business"><div class="visual-topline"><span>BUSINESS OPERATIONS</span><span>02 / 03</span></div><div class="business-composition"><div class="business-orbit orbit-a"></div><div class="business-orbit orbit-b"></div><div class="business-core">8<span>W</span></div><div class="business-node node-a">DATA</div><div class="business-node node-b">FLOW</div><div class="business-node node-c">OPS</div></div><span class="visual-open">↗</span></a><div class="project-info"><div class="project-meta"><span>PROFESSIONAL EXPERIENCE</span><span>LIVE WEBSITE</span></div><h3>8X Business</h3><p>Built and maintained an internal business platform that digitized manual processes across Customer Success, Renewals, Help Desk, Sales, Accounting and Operations. Implemented subscriptions, billing, customer health and reporting workflows.</p><div class="project-stack"><span>PHP</span><span>LARAVEL</span><span>REDIS</span><span>WORKFLOWS</span></div><a class="underlined-link" href="https://business.8worx.com/" target="_blank" rel="noreferrer">Visit website ↗</a></div></article>
-        <article class="project-card reveal"><a class="project-visual visual-mnhna" href="https://mnhna.com/home" target="_blank" rel="noreferrer" aria-label="Visit MnHna"><div class="visual-topline"><span>REAL ESTATE PLATFORM</span><span>03 / 03</span></div><div class="mnhna-art"><span class="mnhna-sun"></span><span class="mnhna-building building-one"></span><span class="mnhna-building building-two"></span><span class="mnhna-building building-three"></span><span class="mnhna-ground"></span><span class="mnhna-word">MnHna</span></div><span class="visual-open">↗</span></a><div class="project-info"><div class="project-meta"><span>PROFESSIONAL EXPERIENCE</span><span>LIVE WEBSITE</span></div><h3>MnHna</h3><p>Built the backend for a real-estate platform, covering database schema design, backend development, REST APIs, business logic and deployment. The project was later continued by other developers.</p><div class="project-stack"><span>PHP</span><span>LARAVEL</span><span>MYSQL</span><span>REST API</span></div><a class="underlined-link" href="https://mnhna.com/home" target="_blank" rel="noreferrer">Visit website ↗</a></div></article>
+      <div class="career reveal" aria-label="Career progression at 8X CRM">
+        <div class="career-node"><i></i><b>Jan 2024</b><span>Junior Backend Developer</span></div>
+        <div class="career-track" aria-hidden="true"><span></span></div>
+        <div class="career-node career-now"><i></i><b>Jan 2026</b><span>Senior Backend Developer</span></div>
       </div>
-      <div class="repository-block reveal"><div class="repository-heading"><span>PERSONAL PROJECTS</span><a href="https://github.com/mohamedelfert" target="_blank" rel="noreferrer">VIEW GITHUB ↗</a></div><div class="repository-list">
-        <div><strong>Bayut / Dubizzle Property Feed</strong><span>Laravel 12 · Modular REST API · XML feeds</span></div>
-        <div><strong>Google Calendar Integration</strong><span>Two-way sync · Webhooks · Queued jobs</span></div>
-        <div><strong>Point of Sale (POS)</strong><span>Laravel 8 · RBAC · Sales reporting</span></div>
-        <div><strong>Invoicing System</strong><span>Laravel 7 · Attachments · Excel export</span></div>
-        <div><strong>E-commerce with Stripe &amp; PayPal</strong><span>Laravel 7 · Payment integrations</span></div>
-        <div><strong>School Management System</strong><span>Laravel 7 · Livewire · Zoom integration</span></div>
-      </div></div>
-      <p class="work-note reveal"><span>NOTE</span> Product visuals above are original illustrative compositions, not screenshots of private systems.</p>
+
+      <div class="roles">
+        <article class="role reveal">
+          <div class="role-meta"><b>8X CRM</b><span>Jan 2026 — Present</span><em class="pill pill-live">Current role</em></div>
+          <div class="role-body">
+            <h3>Senior Backend Developer</h3>
+            <p>Backend features, modules, REST APIs and business logic for the core multi-tenant CRM and related business systems, so customer-requested functionality ships reliably.</p>
+            <ul><li>Investigating and resolving production issues</li><li>Delivering customer-requested functionality</li><li>Working across the CRM and the 8X Business platform</li></ul>
+          </div>
+        </article>
+        <article class="role reveal">
+          <div class="role-meta"><b>8X CRM</b><span>Jan 2024 — Jan 2026</span></div>
+          <div class="role-body">
+            <h3>Junior Backend Developer</h3>
+            <p>Built backend modules and workflows used for day-to-day customer and subscription operations, and contributed to 8X Business, an internal platform that digitizes cross-team processes.</p>
+            <ul><li>Custom Fields module</li><li>Subscription lifecycle management, invoices and payments</li><li>Customer health, segmentation and reporting</li><li>Role-based access control</li></ul>
+          </div>
+        </article>
+        <article class="role role-early reveal">
+          <div class="role-meta"><b>800 SAT</b><span>May 2023 — Sep 2023</span></div>
+          <div class="role-body">
+            <h3>Backend Developer <small>Remote · Jordan</small></h3>
+            <p>Developed and deployed TasSystem, a student–teacher booking and scheduling platform: calendar availability, booking approvals, penalties and PayTabs payments, in an Agile/Scrum team.</p>
+          </div>
+        </article>
+        <article class="role role-early reveal">
+          <div class="role-meta"><b>Ipda3 Tech</b><span>Feb 2022 — May 2022</span></div>
+          <div class="role-body">
+            <h3>Backend Developer, training <small>Mansoura, Egypt</small></h3>
+            <p>Practical PHP and Laravel training. Built the Blood Bank System (Laravel 7, REST APIs, admin dashboard, public website) and the Sofra restaurant operations dashboard.</p>
+          </div>
+        </article>
+      </div>
     </section>
 
-    <section class="education section-wrap section-space" id="education">
-      <div class="section-kicker reveal"><span>05 / THE FOUNDATION</span><span class="kicker-line"></span><span>EDUCATION</span></div>
-      <div class="education-layout"><div><h2 class="display-heading reveal">Built on<br><span class="serif-word">foundations.</span></h2><p class="section-aside reveal">Formal education, continued learning, and the foundations behind my engineering practice.</p></div><div class="education-details reveal"><article><span>2013 — 2017</span><div><h3>Bachelor of Computers and Information</h3><p>Computer Science · Higher Institute of Management and Information Technology, Kafr El-Sheikh</p><b>Excellent · Graduation project: Excellent</b></div></article><article><span>2019 — 2022</span><div><h3>Professional courses &amp; certifications</h3><p>YAT Professional Diploma for Web Development (2019) · Mahara Tech PHP &amp; MySQL (2022) · PHP OOP (Udemy, 2017) · HTML, CSS &amp; JavaScript (HKUST / Coursera, 2016)</p></div></article><article><span>LANGUAGES</span><div><h3>Arabic &amp; English</h3><p>Arabic — Native · English — Intermediate</p></div></article></div></div>
+    <!-- WORK -->
+    <section class="section container" id="work" aria-labelledby="work-title">
+      <p class="eyebrow reveal">04 — Selected work</p>
+      <div class="work-head">
+        <h2 id="work-title" class="display reveal">Real systems, <em>presented responsibly.</em></h2>
+        <p class="aside reveal">Company work is described at a high level to respect confidentiality. Diagrams are illustrative, not screenshots.</p>
+      </div>
+
+      <!-- 8X Business: feature -->
+      <article class="project project-feature reveal" aria-labelledby="p-business">
+        <div class="project-text">
+          <div class="project-tags"><span class="pill pill-dark">Internal business platform</span><span class="pill pill-dark">Professional experience</span></div>
+          <h3 id="p-business">8X Business</h3>
+          <p>An internal platform that digitizes manual business processes and connects departments in one system. My work is backend development across subscription management, billing, customer health and reporting workflows.</p>
+          <ul class="dot-list"><li>Subscription lifecycle and renewals</li><li>Billing, invoices and payment tracking</li><li>Customer health and reporting</li></ul>
+          <div class="stack"><span>PHP</span><span>Laravel</span><span>Redis</span><span>Workflows</span></div>
+          <a class="text-link on-dark" href="https://business.8worx.com/" target="_blank" rel="noreferrer">Visit business.8worx.com <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="dept-map" role="img" aria-label="Diagram: six departments (Customer Success, Renewals, Help Desk, Sales, Accounting, Operations) share one platform core covering subscriptions, billing, customer health and reporting">
+          <ul class="dept-list" aria-hidden="true">
+            <li>Customer Success</li><li>Renewals</li><li>Help Desk</li><li>Sales</li><li>Accounting</li><li>Operations</li>
+          </ul>
+          <div class="dept-core" aria-hidden="true"><b>Platform core</b><span>Subscriptions</span><span>Billing</span><span>Customer health</span><span>Reporting</span></div>
+        </div>
+      </article>
+
+      <div class="project-row">
+        <!-- 8X CRM -->
+        <article class="project project-crm reveal" aria-labelledby="p-crm">
+          <div class="project-tags"><span class="pill">Company product</span><span class="pill">Professional experience</span></div>
+          <h3 id="p-crm">8X CRM</h3>
+          <p>A multi-tenant CRM product. I develop backend features and modules, APIs and business logic, and handle production support and customer-requested functionality.</p>
+          <ol class="module-index" aria-label="Areas I work on in 8X CRM">
+            <li><span>01</span>Custom Fields</li>
+            <li><span>02</span>REST APIs &amp; business logic</li>
+            <li><span>03</span>Role-based access control</li>
+            <li><span>04</span>Production support</li>
+          </ol>
+          <div class="stack"><span>PHP</span><span>Laravel</span><span>MySQL</span><span>RBAC</span></div>
+          <a class="text-link" href="https://8x.8xcrm.net/" target="_blank" rel="noreferrer">Visit 8x.8xcrm.net <span aria-hidden="true">↗</span></a>
+        </article>
+
+        <!-- MnHna -->
+        <article class="project project-mnhna reveal" aria-labelledby="p-mnhna">
+          <div class="project-tags"><span class="pill">Historical project</span><span class="pill">Real-estate platform</span></div>
+          <h3 id="p-mnhna">MnHna</h3>
+          <p>Built the backend of a real-estate platform. The project was later continued by other developers.</p>
+          <dl class="contrib">
+            <div><dt>Data</dt><dd>Database schema design</dd></div>
+            <div><dt>Backend</dt><dd>Development, REST APIs, business logic</dd></div>
+            <div><dt>Delivery</dt><dd>Deployment</dd></div>
+          </dl>
+          <div class="stack"><span>PHP</span><span>Laravel</span><span>MySQL</span><span>REST API</span></div>
+          <a class="text-link" href="https://mnhna.com/home" target="_blank" rel="noreferrer">Visit mnhna.com <span aria-hidden="true">↗</span></a>
+        </article>
+      </div>
+
+      <!-- Personal + earlier projects -->
+      <div class="more reveal">
+        <div class="more-head"><h3>Personal projects</h3><a class="text-link" href="https://github.com/mohamedelfert" target="_blank" rel="noreferrer">View GitHub <span aria-hidden="true">↗</span></a></div>
+        <ul class="more-list">
+          <li><span class="pill">Personal</span><b>Bayut / Dubizzle Property Feed</b><span>Laravel 12 · Modular REST API · XML feeds</span></li>
+          <li><span class="pill">Personal</span><b>Google Calendar Integration</b><span>Two-way sync · Webhooks · Queued jobs</span></li>
+          <li><span class="pill">Personal</span><b>Point of Sale (POS)</b><span>Laravel 8 · RBAC · Sales reporting</span></li>
+          <li><span class="pill">Personal</span><b>Invoicing System</b><span>Laravel 7 · Attachments · Excel export</span></li>
+          <li><span class="pill">Personal</span><b>E-commerce with Stripe &amp; PayPal</b><span>Laravel 7 · Payment integrations</span></li>
+          <li><span class="pill">Personal</span><b>School Management System</b><span>Laravel 7 · Livewire · Zoom integration</span></li>
+        </ul>
+        <div class="more-head more-head-2"><h3>Earlier professional and training projects</h3></div>
+        <ul class="more-list">
+          <li><span class="pill">Historical</span><b>TasSystem (800 SAT)</b><span>Booking, scheduling, PayTabs payments</span></li>
+          <li><span class="pill">Historical</span><b>Blood Bank System (Ipda3 Tech)</b><span>Laravel 7 · REST APIs · Admin dashboard</span></li>
+          <li><span class="pill">Historical</span><b>Sofra dashboard (Ipda3 Tech)</b><span>Restaurant operations dashboard</span></li>
+        </ul>
+      </div>
     </section>
 
-    <section class="contact section-wrap" id="contact">
-      <div class="contact-panel reveal"><div class="contact-topline"><span>06 / START A CONVERSATION</span><span>GOOD WORK STARTS WITH A GOOD CONVERSATION</span></div><div class="contact-main"><p class="contact-eyebrow">HAVE A ROLE, PROJECT, OR IDEA?</p><h2>Let’s make<br><em>it work.</em></h2><a class="contact-circle magnetic" href="mailto:mohamedelfert@yahoo.com" aria-label="Email Mohamed Elfert"><span>↗</span></a></div><div class="contact-bottom"><a href="mailto:mohamedelfert@yahoo.com">MOHAMEDelfert@YAHOO.COM</a><a href="tel:+201153225410">+20 115 322 5410</a><a href="https://www.linkedin.com/in/mohamed-elfert/" target="_blank" rel="noreferrer">LINKEDIN ↗</a><a href="https://github.com/mohamedelfert" target="_blank" rel="noreferrer">GITHUB ↗</a><span>CAIRO, EGYPT</span></div></div>
-      <footer class="footer"><a class="wordmark" href="#top"><span class="wordmark-symbol">M<span>.</span></span><span class="wordmark-name">MOHAMED<br>ELFERT</span></a><span>Designed with intention. Built for the long run.</span><span>© <span id="year"></span> MOHAMED ELFERT</span><a class="back-top" href="#top">BACK TO TOP ↑</a></footer>
+    <!-- EDUCATION -->
+    <section class="section container" id="education" aria-labelledby="edu-title">
+      <p class="eyebrow reveal">05 — Education &amp; certifications</p>
+      <div class="edu">
+        <h2 id="edu-title" class="edu-title reveal">Foundations</h2>
+        <div class="edu-list">
+          <article class="reveal"><span>2013 — 2017</span><div><h3>Bachelor of Computers and Information</h3><p>Computer Science · Higher Institute of Management and Information Technology, Kafr El-Sheikh. Excellent; graduation project: Excellent.</p></div></article>
+          <article class="reveal"><span>2016 — 2022</span><div><h3>Courses &amp; certifications</h3><p>YAT Professional Diploma for Web Development (2019) · Mahara Tech PHP &amp; MySQL (2022) · PHP OOP, Udemy (2017) · HTML, CSS &amp; JavaScript, HKUST / Coursera (2016)</p></div></article>
+          <article class="reveal"><span>Languages</span><div><h3>Arabic &amp; English</h3><p>Arabic — native · English — intermediate</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="container contact-inner">
+        <p class="eyebrow eyebrow-light reveal">06 — Contact</p>
+        <h2 id="contact-title" class="contact-title reveal">Hiring for a backend role? <em>Let’s talk.</em></h2>
+        <p class="contact-lead reveal">I’m open to Senior PHP / Laravel roles and to conversations about CRM, billing and integration work.</p>
+        <div class="contact-actions reveal">
+          <a class="button button-lime magnetic" href="mailto:mohamedelfert@yahoo.com">Email me <span aria-hidden="true">↗</span></a>
+          <a class="button button-ghost" href="assets/cv/Mohamed-Elfert-CV.pdf" download>Download CV <span aria-hidden="true">↓</span></a>
+        </div>
+        <ul class="contact-links reveal">
+          <li><span>Email</span><a href="mailto:mohamedelfert@yahoo.com">mohamedelfert@yahoo.com</a></li>
+          <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/mohamed-elfert/" target="_blank" rel="noreferrer">linkedin.com/in/mohamed-elfert <i aria-hidden="true">↗</i></a></li>
+          <li><span>GitHub</span><a href="https://github.com/mohamedelfert" target="_blank" rel="noreferrer">github.com/mohamedelfert <i aria-hidden="true">↗</i></a></li>
+          <li><span>Location</span><b>Cairo, Egypt</b></li>
+        </ul>
+      </div>
     </section>
   </main>
+
+  <footer class="footer container">
+    <span>© <span id="year">2026</span> Mohamed Elfert</span>
+    <span>Senior Backend Developer — PHP / Laravel</span>
+    <a href="#top">Back to top ↑</a>
+  </footer>
   <script src="script.js"></script>
 </body>
 </html>

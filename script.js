@@ -1,61 +1,85 @@
 (() => {
-  const year = document.getElementById('year');
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const $ = (s, c = document) => c.querySelector(s);
+  const $$ = (s, c = document) => [...c.querySelectorAll(s)];
+
+  const year = $('#year');
   if (year) year.textContent = new Date().getFullYear();
 
-  const menuButton = document.querySelector('.menu-button');
-  const nav = document.querySelector('.nav');
-  menuButton?.addEventListener('click', () => {
-    const isOpen = nav.classList.toggle('open');
-    menuButton.setAttribute('aria-expanded', String(isOpen));
-    menuButton.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
+  /* Mobile menu */
+  const menuButton = $('.menu-button');
+  const nav = $('#nav');
+  const setMenu = open => {
+    nav.classList.toggle('open', open);
+    menuButton.setAttribute('aria-expanded', String(open));
+    menuButton.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+  };
+  menuButton?.addEventListener('click', () => setMenu(!nav.classList.contains('open')));
+  $$('a', nav).forEach(a => a.addEventListener('click', () => setMenu(false)));
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && nav.classList.contains('open')) { setMenu(false); menuButton.focus(); }
   });
-  nav?.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
-    nav.classList.remove('open');
-    menuButton?.setAttribute('aria-expanded', 'false');
-    menuButton?.setAttribute('aria-label', 'Open navigation');
-  }));
+  window.matchMedia('(min-width: 901px)').addEventListener('change', e => { if (e.matches) setMenu(false); });
 
-  const revealItems = document.querySelectorAll('.reveal');
-  if ('IntersectionObserver' in window) {
-    const observer = new IntersectionObserver((entries, currentObserver) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-          currentObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.12, rootMargin: '0px 0px -35px 0px' });
-    revealItems.forEach(item => observer.observe(item));
+  /* Scroll reveal */
+  const reveals = $$('.reveal');
+  if ('IntersectionObserver' in window && !reduceMotion) {
+    const io = new IntersectionObserver((entries, obs) => {
+      entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add('is-visible'); obs.unobserve(en.target); } });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    reveals.forEach(el => io.observe(el));
   } else {
-    revealItems.forEach(item => item.classList.add('is-visible'));
+    reveals.forEach(el => el.classList.add('is-visible'));
   }
 
-  const progress = document.querySelector('.scroll-progress span');
+  /* Active section in nav */
+  const links = new Map($$('.nav a[href^="#"]').map(a => [a.getAttribute('href').slice(1), a]));
+  if ('IntersectionObserver' in window) {
+    const spy = new IntersectionObserver(entries => {
+      entries.forEach(en => {
+        if (!en.isIntersecting) return;
+        links.forEach(a => a.classList.remove('is-current'));
+        links.get(en.target.id)?.classList.add('is-current');
+      });
+    }, { rootMargin: '-40% 0px -55% 0px' });
+    links.forEach((_, id) => { const s = document.getElementById(id); if (s) spy.observe(s); });
+  }
+
+  /* Scroll progress */
+  const bar = $('.scroll-progress span');
   let ticking = false;
   const updateProgress = () => {
-    const scrollable = document.documentElement.scrollHeight - window.innerHeight;
-    const amount = scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0;
-    if (progress) progress.style.width = `${amount}%`;
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.transform = `scaleX(${max > 0 ? Math.min(1, window.scrollY / max) : 0})`;
     ticking = false;
   };
-  window.addEventListener('scroll', () => {
-    if (!ticking) {
-      window.requestAnimationFrame(updateProgress);
-      ticking = true;
-    }
-  }, { passive: true });
+  window.addEventListener('scroll', () => { if (!ticking) { requestAnimationFrame(updateProgress); ticking = true; } }, { passive: true });
   updateProgress();
 
-  // Subtle pointer response; disabled for touch and reduced-motion users.
-  if (window.matchMedia('(hover: hover) and (pointer: fine)').matches && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    document.querySelectorAll('.magnetic').forEach(element => {
-      element.addEventListener('pointermove', event => {
-        const rect = element.getBoundingClientRect();
-        const x = (event.clientX - rect.left - rect.width / 2) * 0.08;
-        const y = (event.clientY - rect.top - rect.height / 2) * 0.08;
-        element.style.transform = `translate(${x}px, ${y}px)`;
+  /* Hero request-path: step through the five stages while visible */
+  const steps = $$('.arch-step');
+  const arch = $('#arch');
+  if (steps.length && arch && !reduceMotion) {
+    let i = 0, timer = null;
+    const show = n => steps.forEach((s, k) => s.classList.toggle('is-active', k === n));
+    const start = () => { if (!timer) timer = setInterval(() => { i = (i + 1) % steps.length; show(i); }, 1800); };
+    const stop = () => { clearInterval(timer); timer = null; };
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(([en]) => (en.isIntersecting ? start() : stop())).observe(arch);
+    } else start();
+    steps.forEach((s, k) => s.addEventListener('mouseenter', () => { stop(); i = k; show(k); }));
+    arch.addEventListener('mouseleave', start);
+    document.addEventListener('visibilitychange', () => (document.hidden ? stop() : start()));
+  }
+
+  /* Magnetic buttons: fine pointers only */
+  if (!reduceMotion && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    $$('.magnetic').forEach(el => {
+      el.addEventListener('pointermove', e => {
+        const r = el.getBoundingClientRect();
+        el.style.transform = `translate(${(e.clientX - r.left - r.width / 2) * 0.1}px, ${(e.clientY - r.top - r.height / 2) * 0.12}px)`;
       });
-      element.addEventListener('pointerleave', () => { element.style.transform = ''; });
+      el.addEventListener('pointerleave', () => { el.style.transform = ''; });
     });
   }
 })();
