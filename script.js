@@ -6,6 +6,34 @@
   const year = $('#year');
   if (year) year.textContent = new Date().getFullYear();
 
+  /* Theme toggle (preference stored locally; falls back silently) */
+  const themeBtn = $('.theme-toggle');
+  const root = document.documentElement;
+  const syncTheme = () => {
+    const light = root.getAttribute('data-theme') === 'light';
+    themeBtn?.setAttribute('aria-label', light ? 'Switch to dark theme' : 'Switch to light theme');
+    $('meta[name="theme-color"]')?.setAttribute('content', light ? '#f3f1ea' : '#080a0d');
+  };
+  themeBtn?.addEventListener('click', () => {
+    const next = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+    root.setAttribute('data-theme', next);
+    try { localStorage.setItem('theme', next); } catch (e) {}
+    syncTheme();
+  });
+  syncTheme();
+
+  /* Cursor spotlight on cards (fine pointers only) */
+  if (window.matchMedia('(hover: hover) and (pointer: fine)').matches && !reduceMotion) {
+    $$('.arch, .facts div, .principles li, .skill, .role, .project-feature, .project-crm, .project-mnhna').forEach(el => {
+      el.classList.add('spot');
+      el.addEventListener('pointermove', e => {
+        const r = el.getBoundingClientRect();
+        el.style.setProperty('--mx', `${e.clientX - r.left}px`);
+        el.style.setProperty('--my', `${e.clientY - r.top}px`);
+      });
+    });
+  }
+
   /* Mobile menu */
   const menuButton = $('.menu-button');
   const nav = $('#nav');
